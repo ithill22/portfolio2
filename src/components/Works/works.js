@@ -2,40 +2,49 @@ import React from "react";
 import "./works.css";
 import StreetEatz from "../../assets/streeteatz.png";
 import DraftMadness from "../../assets/draftmadness.png";
-import Portfolio3 from "../../assets/portfolio-3.png";
-import Portfolio4 from "../../assets/portfolio-4.png";
-import Portfolio5 from "../../assets/portfolio-5.png";
-import Portfolio6 from "../../assets/portfolio-6.png";
+import Mmdraft from "../../assets/mmdraft.png";
+import Portfolio from "../../assets/portfolio.png";
+import Portfolio5 from "../../assets/under_construction.png";
+import Portfolio6 from "../../assets/under_construction2.png";
 
 const projects = [
   { image: StreetEatz, name: "StreetEatz", link: "https://github.com/StreetEatz" },
-  { image: DraftMadness, name: "Draft Madness Backend", link: "https://github.com/ithill22/draft_madness_be" },
-  { image: Portfolio3, name: "Portfolio 3 Project", link: "#" },
-  { image: Portfolio4, name: "Portfolio 4 Project", link: "#" },
-  { image: Portfolio5, name: "Portfolio 5 Project", link: "#" },
-  { image: Portfolio6, name: "Portfolio 6 Project", link: "#" }
+  { image: DraftMadness, name: "Turing Draft Madness", link: "https://github.com/ithill22/draft_madness_be" },
+  { image: Mmdraft, name: "(WIP) Fantasy Draft App 2.0", link: "https://github.com/orgs/mmdraft/repositories", wip: true },
+  { image: Portfolio, name: "Portfolio Website", link: "#" },
+  { image: Portfolio5, name: "Portfolio 5 Project", comingSoon: true },
+  { image: Portfolio6, name: "Portfolio 6 Project", comingSoon: true }
 ];
 
 const Works = () => {
   return (
     <section id="works">
       <h2 className="worksTitle">My Portfolio</h2>
-      <span className="workDesc">Demo text...</span>
+      <span className="worksDesc">Curious to learn more about what I do? Let's explore.</span>
       <div className="worksImgs">
         {projects.map((project, index) => (
-          <a href={project.link} target="_blank" rel="noopener noreferrer" key={index}>
-            <div className="workContainer">
+          <div className="workContainer" key={index}>
+            <div className="imgWrapper">
               <img src={project.image} alt={project.name} className="worksImg" />
-              <div className="overlay">
-                <span className="projectName">{project.name}</span>
-              </div>
             </div>
-          </a>
+            <div className="overlay">
+              {project.wip && <span className="wipLabel">Work in Progress</span>}
+              <span className="projectName">{project.name}</span>
+              {project.comingSoon ? (
+                <span className="comingSoon">Coming Soon</span>
+              ) : (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="projectLink">
+                  View Project
+                </a>
+              )}
+            </div>
+          </div>
         ))}
       </div>
-      <button className="workBtn">See More</button>
+      <a href="https://github.com/ithill22" target="_blank" rel="noopener noreferrer" className="workBtn">See More</a>
     </section>
   );
-}
+};
 
 export default Works;
+

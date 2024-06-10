@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
-  const resumePdfPath = process.env.PUBLIC_URL + '/resume.pdf';
+  const resumePdfPath = process.env.PUBLIC_URL + '/resume_master.pdf';
 
   const sendEmail = (e) => {
     e.preventDefault();

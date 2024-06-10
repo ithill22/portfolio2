@@ -8,7 +8,7 @@ const Skills = () => {
   return (
     <section id="skills">
       <span className="skillTitle">What I Do</span>
-      <span className="skillDesc">I am a skilled...</span>
+      <span className="skillDesc">I am skilled in...</span>
       <div className="skillBars">
         <div className="skillBar">
           <img src={Backend} alt="Backend" className="skillBarImg" />

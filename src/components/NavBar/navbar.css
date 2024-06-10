@@ -39,7 +39,13 @@
   justify-content: center;
   padding: 0 1.5rem;
   border-radius: 2rem;
+  cursor: pointer;
 }
+
+.desktopMenuBtn:hover {
+  background: darkgray;
+}
+
 
 .desktopMenuImg {
   object-fit: cover;

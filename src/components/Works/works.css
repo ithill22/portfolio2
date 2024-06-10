@@ -14,6 +14,15 @@
 
 .workContainer {
   position: relative;
+  width: 300px; /* Set a fixed width for each image container */
+  height: 200px; /* Set a fixed height for each image container */
+  margin: 0.5rem;
+  overflow: hidden; /* Ensure any overflow is hidden */
+}
+
+.imgWrapper {
+  width: 100%;
+  height: 100%;
 }
 
 .overlay {
@@ -21,16 +30,49 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
-  overflow: hidden;
-  width: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.projectName {
+.projectName, .comingSoon, .projectLink, .wipLabel {
   color: white;
   font-size: 1.2rem;
   padding: 0.5rem;
   text-align: center;
+}
+
+.comingSoon {
+  color: red;
+}
+
+.projectLink {
+  color: #63a0ef; /* Change the color to a hyperlink color */
+  text-decoration: underline; /* Add underline to mimic hyperlink */
+  font-weight: normal; /* You can adjust font weight as needed */
+}
+
+.projectLink:hover {
+  color: #1e6cd8; /* Change color on hover to give interactive feedback */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.wipLabel {
+  background-color: #ffcc00; /* Yellow background color */
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.workContainer:hover .overlay {
+  opacity: 1;
 }
 
 .worksTitle {
@@ -54,9 +96,9 @@
 }
 
 .worksImg {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  height: 20rem;
-  margin: 0.5rem;
 }
 
 .workBtn {
@@ -65,11 +107,17 @@
   border: none;
   border-radius: 2rem;
   background: white;
+  color: black;
   font-size: 1rem;
 }
 
-@media screen and (max-width:585px) {
-  .worksImg {
-      height: 48vw;
+.workBtn:hover {
+  background: darkgray;
+}
+
+@media screen and (max-width: 585px) {
+  .workContainer {
+    width: 90vw; /* Adjusts the width for smaller screens */
+    height: 60vw; /* Adjusts the height for smaller screens */
   }
 }
