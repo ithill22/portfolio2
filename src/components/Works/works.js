@@ -11,7 +11,7 @@ const projects = [
   { image: StreetEatz, name: "StreetEatz", link: "https://github.com/StreetEatz" },
   { image: DraftMadness, name: "Turing Draft Madness", link: "https://github.com/ithill22/draft_madness_be" },
   { image: Mmdraft, name: "Fantasy Draft App 2.0", link: "https://github.com/orgs/mmdraft/repositories", wip: true },
-  { image: Portfolio, name: "Portfolio Website", link: "#" },
+  { image: Portfolio, name: "Portfolio Website", link: "https://github.com/ithill22/portfolio2" },
   { image: Portfolio5, name: "Portfolio 5 Project", comingSoon: true },
   { image: Portfolio6, name: "Portfolio 6 Project", comingSoon: true }
 ];
