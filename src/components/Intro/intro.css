@@ -5,6 +5,7 @@
   margin: 0 auto;
   margin-bottom: 50px;
   overflow: hidden;
+  position: relative;
 }
 
 .bg {
@@ -16,14 +17,14 @@
   height: 100vh;
 }
 
-.overlay {
+.introOverlay {
   position: absolute;
-  top: 5rem;
-  right: 0;
-  height: 100vh;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  background-color: rgba(30, 30, 30, 0.8); /* Same color as the text shadow with opacity */
-  z-index: 0; /* Ensure it sits between the background image and the content */
+  background-color: rgba(30, 30, 30, 0.6);
+  z-index: 0;
 }
 
 .introContent {
@@ -42,7 +43,7 @@
 
 .hello {
   font-size: 1.75rem;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 .introName {
@@ -50,7 +51,7 @@
 }
 
 .introPara {
-  font-size: medium;
+  font-size: large;
   font-weight: 300;
   letter-spacing: 1px;
 }

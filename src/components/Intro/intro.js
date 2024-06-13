@@ -6,7 +6,7 @@ import btnImg from '../../assets/hireme.png';
 const Intro = () => {
   return (
     <section id="intro">
-        <div className="overlay"></div>
+        <div className="introOverlay"></div>
         <div className="introContent">
             <span className="hello">Hello</span>
             <span className="introText">I'm <span className="introName">Isaac Thill</span> <br />Software Engineer</span>
