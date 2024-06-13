@@ -5,15 +5,27 @@
   margin: 0 auto;
   margin-bottom: 50px;
   overflow: hidden;
+  position: relative;
 }
 
 .bg {
   position: absolute;
   top: 5rem;
-  right: 0;
+  right: -5vw;
   z-index: -1;
   object-fit: cover;
-  height: 100vh;
+  height: 100%;
+  width: auto;
+}
+
+.introOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 249, 240, 0.4);
+  z-index: 0;
 }
 
 .introContent {
@@ -25,11 +37,10 @@
   justify-content: center;
   position: relative;
   z-index: 1; 
-  color: lightgrey;
+  color: #2E1D14;
   max-width: 60%;
-  text-shadow: 0 0 10px rgb(30, 30, 30)
+  text-shadow: 0 0 10px #fff9f0;
 }
-
 
 .hello {
   font-size: 1.75rem;
@@ -37,18 +48,18 @@
 }
 
 .introName {
-  color: yellow;
+  color: #317A8B;
 }
 
 .introPara {
-  font-size: medium;
-  font-weight: 300;
+  font-size: large;
+  font-weight: 375;
   letter-spacing: 1px;
 }
 
 .btn {
-  background: white;
-  color: black;
+  background: #E0DBD5;
+  color: #2E1D14;
   margin: 1rem 0;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -66,9 +77,12 @@
   height: 1rem;
 }
 
-@media screen and (max-width: 840px){
+@media screen and (max-width: 840px) {
   .bg {
+    top: 5rem;
     right: -10vw;
+    height: auto;
+    width: 80vw;
   }
   .introContent {
     font-size: 10vw;
@@ -77,12 +91,14 @@
   .hello {
     font-size: 4.5vw;
   }
-
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .bg {
-    right: -80vw;
+    top: 5rem;
+    right: -20vw;
+    height: auto;
+    width: 120vw;
   }
   .introContent {
     font-size: 6vw;

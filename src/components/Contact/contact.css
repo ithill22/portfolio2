@@ -13,6 +13,7 @@
 .contactPageTitle {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #2E1D14;
 }
 
 .resumeImg {
@@ -26,7 +27,7 @@
   padding: 1rem;
   font-size: medium;
   font-weight: 300;
-  color: lightgrey;
+  color: #2E1D14;
 }
 
 .contactForm {
@@ -48,12 +49,17 @@
   color: white;
   border: none;
   border-radius: 0.5rem;
-  background: rgb(40, 40, 40);
+  background: #3b3833;
+}
+
+.name::placeholder, .email::placeholder, .msg::placeholder {
+  color: #fff9f0;
+  opacity: 0.7;
 }
 
 .submitBtn {
-  background: white;
-  color: black;
+  background: #E0DBD5;
+  color: #3b3833;
   border: none;
   border-radius: 0.5rem;
   margin: 2rem;

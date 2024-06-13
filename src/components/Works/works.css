@@ -10,6 +10,7 @@
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
+  color: #2E1D14
 }
 
 .workContainer {
@@ -31,7 +32,7 @@
   left: 0;
   right: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 29, 20, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease;
   display: flex;
@@ -48,11 +49,11 @@
 }
 
 .comingSoon {
-  color: red;
+  color: #da6758;
 }
 
 .projectLink {
-  color: #63a0ef; 
+  color: #317A8B; 
   text-decoration: underline; 
   font-weight: normal; 
 }
@@ -63,7 +64,7 @@
 }
 
 .wipLabel {
-  background-color: #ffcc00; 
+  background-color: #c1a238; 
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -106,8 +107,8 @@
   padding: 0.5rem 2.5rem;
   border: none;
   border-radius: 2rem;
-  background: white;
-  color: black;
+  background: #E0DBD5;
+  color: #2E1D14;
   font-size: 1rem;
 }
 
