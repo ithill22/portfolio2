@@ -16,6 +16,16 @@
   height: 100vh;
 }
 
+.overlay {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(30, 30, 30, 0.8); /* Same color as the text shadow with opacity */
+  z-index: 0; /* Ensure it sits between the background image and the content */
+}
+
 .introContent {
   padding: 2rem;
   font-size: 3rem;
@@ -27,9 +37,8 @@
   z-index: 1; 
   color: lightgrey;
   max-width: 60%;
-  text-shadow: 0 0 10px rgb(30, 30, 30)
+  text-shadow: 0 0 10px rgb(30, 30, 30);
 }
-
 
 .hello {
   font-size: 1.75rem;
@@ -77,7 +86,6 @@
   .hello {
     font-size: 4.5vw;
   }
-
 }
 
 @media screen and (max-width: 480px){
